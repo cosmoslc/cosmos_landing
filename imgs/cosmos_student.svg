@@ -1,0 +1,54 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@600;900&amp;display=swap');
+      .word{ font-family:'Livvic', Arial, sans-serif; font-weight:900; }
+      .role-label{ font-family:'Livvic', Arial, sans-serif; font-weight:600; }
+    </style>
+
+    <radialGradient id="sphereHighlight" cx="32%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#5C7BFF"/>
+      <stop offset="45%" stop-color="#1B3BFF"/>
+      <stop offset="100%" stop-color="#0A1454"/>
+    </radialGradient>
+    <linearGradient id="ringOutline" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1454"/>
+      <stop offset="50%" stop-color="#3C5BFF"/>
+      <stop offset="100%" stop-color="#0A1454"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3BFF"/>
+      <stop offset="100%" stop-color="#0A1454"/>
+    </linearGradient>
+    <filter id="softShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0A1454" flood-opacity="0.28"/>
+    </filter>
+    <filter id="ringShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0A1454" flood-opacity="0.18"/>
+    </filter>
+    <filter id="iconShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#0A1454" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- App icon background -->
+  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="#FFFFFF" filter="url(#iconShadow)"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="none" stroke="#0A1454" stroke-opacity="0.12" stroke-width="6"/>
+
+  <!-- Planet sphere -->
+  <circle cx="512" cy="330" r="112" fill="url(#sphereHighlight)" filter="url(#softShadow)"/>
+
+  <!-- Tilted ring -->
+  <g transform="rotate(-33 512 330)" filter="url(#ringShadow)">
+    <ellipse cx="512" cy="330" rx="202" ry="49" fill="#FFFFFF" stroke="url(#ringOutline)" stroke-width="4"/>
+  </g>
+
+  <!-- Cosmos wordmark -->
+  <text x="512" y="610" text-anchor="middle" class="word" font-size="128" letter-spacing="1" fill="url(#textGrad)">Cosmos</text>
+
+  <!-- Accent bar -->
+  <rect x="382" y="660" width="260" height="8" rx="4" fill="#0A1454"/>
+
+  <!-- Role label -->
+  <text x="512" y="750" text-anchor="middle" class="role-label" font-size="66" letter-spacing="2" fill="#0A1454">Student</text>
+</svg>
